@@ -28,15 +28,13 @@ const data = {
   ]
 };
 
-export default React.createClass({
-  displayName: 'PolarExample',
 
-  render() {
+function App(){
     return (
-      <div>
+      <div style={{"width" : "800px"}}>
         <h2>Polar Example</h2>
         <Polar data={data} />
       </div>
     );
   }
-});
+  export default App;

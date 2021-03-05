@@ -13,7 +13,13 @@ class UserComponent extends React.Component {
     componentDidMount(){
         UserService.getUsers().then((response) => {
             this.setState({ users: response.data})
+            
+            
+            console.log(this.state.users);
+            console.log("아이디"+this.state.users[0]["id"]);
         });
+
+        
     }
 
     render (){
@@ -47,11 +53,9 @@ class UserComponent extends React.Component {
                     </tbody>
                 </table>
                         
-
-                                <hr />
-                                   <Doughnut/>
-                                <hr />
-
+                        <hr></hr>
+                        <Doughnut data={this.state.users}/>
+                        
             </div>
 
         )
